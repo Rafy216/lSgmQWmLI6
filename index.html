@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selamat Datang 😜</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <style>
+            * {
+                text-align: center;
+            }
+            .floating-box {
+                box-sizing: border-box;
+                background-color: #defff2;
+                border-radius: 20px;
+                height: max-content;
+                margin: 0 auto;
+                width: 300pt;
+            }
+            .floating-box > .child {
+                left: 50%;
+                position: relative;
+            }
+            .button {
+                background-color: white;
+                border: 2px solid #73ff00;
+                font-size: 20pt;
+                margin: 10px;
+            }
+            .button:hover {
+                background-color: #73ff00;
+                font-size: 20pt;
+                margin: 10px;
+            }
+            .button a {
+                display: block;
+                text-decoration: none;
+                color: black;
+            }
+            .button a:hover {
+                display: block;
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <strong>
+            <div id="welcome" style="font-size: 20pt; text-transform: uppercase;">😄 Selamat Datang Pengunjung 😄</div>
+        </strong>
+        <img src="images/profile.png" alt="Profil" height="218px">
+        <div class="floating-box">
+            <button class="button"><a href="profile.html" target="_blank">Profil Saya</a></button><br>
+            <button class="button"><a href="https://wa.me/6285524977074?text=%48%61%69%20%52%61%66%69%21" target="_blank">Hubungi Saya</a></button>
+        </div>
+
+        <script>
+            const welcome =
+                  document.getElementById("welcome");
+            
+            let hue = 0;
+            
+            setInterval(() => {
+                hue = (hue + 1) % 360;
+                const color = `hsl(${hue}, 100%, 50%)`;
+                welcome.style.color = color;
+            }, 5);
+      </script>
+    </body>
+</html>
